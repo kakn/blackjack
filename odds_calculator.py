@@ -46,24 +46,24 @@ def bustodds(deck, deck2):
         elif int(i) < 12:
             total1 += int(i)
             total2 += int(i)
-    fucks1 = 0
-    fucks2 = 0
+    count1 = 0
+    count2 = 0
     for i in deck:
         if i == "Ace":
             if 1 + int(total1) > 21:
-                fucks1 += 1
+                count1 += 1
             if 1 + int(total2) > 21:
-                fucks2 += 1
+                count2 += 1
         else:
             if int(i) + int(total1) > 21:
-                fucks1 += 1
+                count1 += 1
             if int(i) + int(total2) > 21:
-                fucks2 += 1
-    if fucks1 < fucks2:
-        chance = 100 * (int(fucks1) / len(deck))
+                count2 += 1
+    if count1 < count2:
+        chance = 100 * (int(count1) / len(deck))
         return round(chance, 2)
     else:
-        chance = 100 * (int(fucks2) / len(deck))
+        chance = 100 * (int(count2) / len(deck))
         return round(chance, 2)
 
 def houseodds(deck, deck2, housed):
@@ -92,43 +92,43 @@ def houseodds(deck, deck2, housed):
         newtot = total2
     else:
         newtot = total1
-    fucks1 = 0
-    fucks2 = 0
+    count1 = 0
+    count2 = 0
     for i in deck:
         if i == "Ace":
             if (11 + int(housetotal1) > int(newtot)) and (11 + int(housetotal1) < 22) or (1 + int(housetotal1) > int(newtot)) and (1 + int(housetotal1) < 22):
-                fucks1 += 1
+                count1 += 1
             if (11 + int(housetotal2) > int(newtot)) and (11 + int(housetotal2) < 22) or (1 + int(housetotal2) > int(newtot)) and (1 + int(housetotal2) < 22):
-                fucks2 += 1
+                count2 += 1
         else:
             if (int(i) + int(housetotal1) > int(newtot)) and (int(i) + int(housetotal1 < 22)):
-                fucks1 += 1
+                count1 += 1
             if (int(i) + int(housetotal2) > int(newtot)) and (int(i) + int(housetotal2 < 22)):
-                fucks2 += 1
+                count2 += 1
 
-    if fucks1 < fucks2:
-        chance = 100 * (int(fucks2) / len(deck))
+    if count1 < count2:
+        chance = 100 * (int(count2) / len(deck))
         return round(chance, 2)
     else:
-        chance = 100 * (int(fucks1) / len(deck))
+        chance = 100 * (int(count1) / len(deck))
         return round(chance, 2)
 
     for i in deck:
         if i == "Ace":
             if 1 + int(total1) > 21:
-                fucks1 += 1
+                count1 += 1
             if 1 + int(total2) > 21:
-                fucks2 += 1
+                count2 += 1
         else:
             if int(i) + int(total1) > 21:
-                fucks1 += 1
+                count1 += 1
             if int(i) + int(total2) > 21:
-                fucks2 += 1
-    if fucks1 < fucks2:
-        chance = 100 * (int(fucks1) / len(deck))
+                count2 += 1
+    if count1 < count2:
+        chance = 100 * (int(count1) / len(deck))
         return round(chance, 2)
     else:
-        chance = 100 * (int(fucks2) / len(deck))
+        chance = 100 * (int(count2) / len(deck))
         return round(chance, 2)
 
 def blackodds(deck, deck2):
@@ -141,24 +141,24 @@ def blackodds(deck, deck2):
         elif int(i) < 12:
             total1 += int(i)
             total2 += int(i)
-    fucks1 = 0
-    fucks2 = 0
+    count1 = 0
+    count2 = 0
     for i in deck:
         if i == "Ace":
             if 1 + int(total1) == 21:
-                fucks1 += 1
+                count1 += 1
             if 11 + int(total2) == 21:
-                fucks2 += 1
+                count2 += 1
         else:
             if int(i) + int(total1) == 21:
-                fucks1 += 1
+                count1 += 1
             if int(i) + int(total2) == 21:
-                fucks2 += 1
-    if fucks1 < fucks2:
-        chance = 100 * (int(fucks2) / len(deck))
+                count2 += 1
+    if count1 < count2:
+        chance = 100 * (int(count2) / len(deck))
         return round(chance, 2)
     else:
-        chance = 100 * (int(fucks1) / len(deck))
+        chance = 100 * (int(count1) / len(deck))
         return round(chance, 2)
 
 over = False

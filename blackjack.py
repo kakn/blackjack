@@ -127,15 +127,15 @@ while int(chips) > 0 and len(deck) > 0:
 
     over = False
     while not over:
-        fucks = 0
+        count = 0
         for i in deck:
             if i == "Ace":
                 if 1 + int(playertotal) > 21:
-                    fucks += 1
+                    count += 1
             else:
                 if int(i) + int(playertotal) > 21:
-                    fucks += 1
-        chance = int(fucks) / len(deck)
+                    count += 1
+        chance = int(count) / len(deck)
         print("You have a {c}% chance of going bust.".format(c=format(chance*100)))
         time.sleep(1)
         ducks = 0
@@ -217,4 +217,4 @@ time.sleep(1)
 if len(deck) == 0:
     print("You managed to play all cards without going bust!")
 if chips < 1:
-    print("You ran out of money thumbass")
+    print("You ran out of money")
